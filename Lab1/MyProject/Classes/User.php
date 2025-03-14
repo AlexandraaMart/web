@@ -1,4 +1,5 @@
 <?php
+namespace MyProject\Classes;
 class User {
     public $name;
     public $login;

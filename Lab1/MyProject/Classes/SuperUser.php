@@ -1,4 +1,5 @@
 <?php
+namespace MyProject\Classes;
 require_once 'User.php';
 
 class SuperUser extends User {

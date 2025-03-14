@@ -15,5 +15,9 @@ class User {
         echo "Логин: " . $this->login . "\n";
         echo "Пароль: ". $this->password . "\n";
     }
+
+    public function __destruct() {
+        echo "Пользователь " . $this->login . " удален.\n";
+    }
 }
 ?>

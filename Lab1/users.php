@@ -1,6 +1,9 @@
 <?php
-require 'MyProject/Classes/User.php';
-require_once 'MyProject/Classes/SuperUser.php';
+require_once 'User.php';
+require_once 'SuperUser.php';
+
+use MyProject\Classes\User;
+use MyProject\Classes\SuperUser;
 
 $user1 = new User('Иван', 'ivan123', 'pass123');
 $user2 = new User('Мария', 'mar456', 'pass456');

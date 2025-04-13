@@ -6,8 +6,8 @@
     <title>Диаграмма классов</title>
     <style>
         img {
-            max-width: 100%; /* Уменьшает изображение до ширины контейнера */
-            height: auto; /* Соотношение сторон сохраняется */
+            max-width: 100%; 
+            height: auto; 
         }
     </style>
 </head>

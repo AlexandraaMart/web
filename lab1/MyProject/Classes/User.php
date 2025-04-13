@@ -1,6 +1,7 @@
 
-//Первое, второе задание
+//Первое, второе, третье задание
 <?php
+namespace MyProject\Classes;
 
 class User {
     public $name;

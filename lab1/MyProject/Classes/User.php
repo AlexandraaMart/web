@@ -16,5 +16,9 @@ class User {
     public function showInfo() {
         echo "Имя: $this->name, Логин: $this->login, Пароль: $this->password<br>";
     }
+
+    public function __destruct() {
+           echo "Пользователь $this->login удален.";
+       }
 }
 ?>

@@ -1,6 +1,5 @@
 //третье, четвертое задание
 <?php
-
    namespace MyProject\Classes;
 
    require_once 'User.php';

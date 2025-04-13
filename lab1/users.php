@@ -1,5 +1,5 @@
 
-//первое задание
+//первое, второе задание
 <?php
 
 require 'MyProject/Classes/User.php';

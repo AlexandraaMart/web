@@ -3,6 +3,8 @@
 <?php
 namespace MyProject\Classes;
 
+require_once 'AbstractUser.php'; // пятое задание
+
 class User {
     public $name;
     public $login;

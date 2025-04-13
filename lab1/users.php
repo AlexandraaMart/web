@@ -16,11 +16,14 @@ $user3->showInfo();
 
 
 
-//третье задание
+//третье, четвертое задание
 <?php
 
 require_once 'MyProject/Classes/User.php';
 require_once 'MyProject/Classes/SuperUser.php';
+
+use MyProject\Classes\User;
+use MyProject\Classes\SuperUser;
 
 $user1 = new User('Алексей', 'alex', '123');
 $user2 = new User('Мария', 'maria', '1234');

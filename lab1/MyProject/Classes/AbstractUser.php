@@ -1,5 +1,3 @@
-//шестое задание
-
 <?php
 declare(strict_types=1);
 namespace MyProject\Classes;

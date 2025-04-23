@@ -1,142 +1,33 @@
-
-//первое, второе задание
 <?php
 
-require 'MyProject/Classes/User.php';
+spl_autoload_register(function ($class) {
+    $file = str_replace('\\', '/', __DIR__) . str_replace('\\', '/', substr($class,9)) . '.php'; 
+    // echo str_replace('\\', '/', __DIR__) . str_replace('\\', '/', substr($class,9)) . '.php';
+   
+    if (file_exists($file)) {
+        require $file;
+        
+    }
+});
 
-$user1 = new User('Алексей', 'alex', '123');
-$user2 = new User('Мария', 'maria', '1234');
-$user3 = new User('Иван', 'ivan', '12345');
-
-$user1->showInfo();
-$user2->showInfo();
-$user3->showInfo();
-?>
-
-
-
-
-//третье, четвертое задание
-<?php
-
-require_once 'MyProject/Classes/User.php';
-require_once 'MyProject/Classes/SuperUser.php';
 
 use MyProject\Classes\User;
 use MyProject\Classes\SuperUser;
 
-$user1 = new User('Алексей', 'alex', '123');
-$user2 = new User('Мария', 'maria', '1234');
-$user3 = new User('Иван', 'ivan', '12345');
+
+$user1 = new User('Sasha', '123', 'pas1');
+$user2 = new User('Olga', '1234', 'pas2');
+$user3 = new User('Natalya', '12345', 'pas3');
 
 $user1->showInfo();
 $user2->showInfo();
 $user3->showInfo();
 
-$user = new SuperUser('Сергей', 'serg', '123456', 'Administrator');
-
+$user = new SuperUser('Zoya', 'z123456', 'pas4', 'manager');
 $user->showInfo();
-?>
+$user->getInfo();
 
-//пятое задание
-<?php
-declare(strict_types=1);
-
-use MyProject\Classes\User;
-use MyProject\Classes\SuperUser;
-
-spl_autoload_register(function ($class_name) {
-    $path = __DIR__.'/'. str_replace('\\', '/', $class_name) . '.php'; 
-    if (file_exists($path)) {
-        require $path;
-    }
-});
-
-$user1 = new User('Алексей', 'alex', '123');
-$user2 = new User('Мария', 'maria', '1234');
-$user3 = new User('Иван', 'ivan', '12345');
-
-$user1->showInfo();
-$user2->showInfo();
-$user3->showInfo();
-
-$user = new SuperUser('Сергей', 'serg', '123456', 'Administrator');
-
-$user->showInfo();
-?>
-
-
-
-
-//седьмое задание
-
-<?php
-declare(strict_types=1);
-
-use MyProject\Classes\User;
-use MyProject\Classes\SuperUser;
-
-spl_autoload_register(function ($class_name) {
-    $path = __DIR__.'/'. str_replace('\\', '/', $class_name) . '.php'; 
-    if (file_exists($path)) {
-        require $path;
-    }
-});
-
-$user1 = new User('Алексей', 'alex', '123');
-$user2 = new User('Мария', 'maria', '1234');
-//$user3 = new User('Иван', 'ivan', '12345');
-
-$user1->showInfo();
-$user2->showInfo();
-//$user3->showInfo();
-
-//$user = new SuperUser('Сергей', 'serg', '123456', 'Administrator');
-//$user->showInfo();
-
-$superUser = new SuperUser("Иван", "ivan", "12345", "admin");
-
-$info = $superUser->getInfo();
-print_r($info)
-?>
-
-
-//восьмое задание
-<?php
-declare(strict_types=1);
-
-use MyProject\Classes\User;
-use MyProject\Classes\SuperUser;
-
-spl_autoload_register(function ($class_name) {
-    $path = __DIR__.'/'. str_replace('\\', '/', $class_name) . '.php'; 
-    if (file_exists($path)) {
-        require $path;
-    }
-});
-
-$user1 = new User('Алексей', 'alex', '123');
-$user2 = new User('Мария', 'maria', '1234');
-//$user3 = new User('Иван', 'ivan', '12345');
-
-$user1->showInfo();
-$user2->showInfo();
-//$user3->showInfo();
-
-//$user = new SuperUser('Сергей', 'serg', '123456', 'Administrator');
-//$user->showInfo();
-
-$superUser = new SuperUser("Иван", "ivan", "12345", "admin");
-
-$info = $superUser->getInfo();
-print_r($info);
-echo '<br>';
-
-echo "Всего обычных пользователей: " . User::getUserCount();
-echo '<br>';
-echo "Всего супер-пользователей: " . SuperUser::getSuperUserCount();
-echo '<br>';
-?>
-
-
-
+echo '<pre>';
+echo "Всего обычных пользователей: " . User::$userCount . "\n";
+echo "Всего cупер-пользователей: " . SuperUser::$superUserCount . "\n";
+echo '</pre>';

@@ -21,24 +21,35 @@ if (isset($_GET['del'])) {
 <head>
 	<title>Новостная лента</title>
 	<meta charset="utf-8">
+	<style>
+    body {
+        font-family: sans-serif;
+        background-color: #f4f4f4;
+        margin: 5;
+    }
+    .container {
+        font-family: sans-serif;
+        background-color: #f4f4f4;
+        padding: 30px;
+        border-radius: 10px;
+        line-height: 1.2;
+    }
+    h1 {
+        color: #333;
+    }
+ </style>
 </head>
 <body>
 <div class='container'>
     <div class="news-section">
   <h1>Последние новости</h1>
   <?php
-//   // Выводим сообщение об ошибке, если оно есть
-//   if (!empty($errMsg)) {
-//       echo "<div class='error-message'>{$errMsg}</div>";
-//   }
-  
-  // Выводим новости
   require "get_news.inc.php";
   ?>
   </div>
   
       <div class="form-selection">
-          
+          <hr style="border: 1px solid #000; margin: 20px 0;">
           <h1>Создание новости</h1>
           
           <?php

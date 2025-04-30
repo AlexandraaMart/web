@@ -25,7 +25,7 @@ if (isset($_GET['del'])) {
     body {
         font-family: sans-serif;
         background-color: #f4f4f4;
-        margin: 5;
+        margin: 5px;
     }
     .container {
         font-family: sans-serif;

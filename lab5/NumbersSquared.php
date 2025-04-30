@@ -1,9 +1,9 @@
 <?php
 
 class NumbersSquared implements Iterator{
-    private $start;
-    private $end;
-    private $current;
+    private int $start;
+    private int $end;
+    private int $current;
 
     public function __construct(int $start, int $end)
     {
